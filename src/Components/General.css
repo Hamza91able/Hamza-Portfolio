@@ -1,0 +1,11 @@
+.mobile-menu .MuiPaper-root {
+    background-color: #0A0A0A !important;
+}
+
+.mobile-menu .MuiDivider-root {
+    background: rgb(97, 97, 97);
+}
+
+.mobile-menu .MuiList-root {
+    color: white;
+}
