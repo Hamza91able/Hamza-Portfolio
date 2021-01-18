@@ -9,6 +9,7 @@ import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
 import Proficiency from './Proficiency';
+import Projects from './Projects';
 
 const styles = theme => ({
     hideImageMobile: {
@@ -143,6 +144,8 @@ class Home extends Component {
                 <Experience />
                 <div style={{ height: 130 }} />
                 <Proficiency />
+                <div style={{ height: 130 }} />
+                <Projects />
                 <div style={{ height: 130 }} />
             </div>
         )
