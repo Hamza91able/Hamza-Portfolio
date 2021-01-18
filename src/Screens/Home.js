@@ -5,6 +5,7 @@ import './Home.css';
 
 import Image01 from '../Assets/Images/Group 34.png';
 import ScrollDownImage from '../Assets/Images/Group 32.png';
+import Skills from './Skills';
 
 const styles = theme => ({
     hideImageMobile: {
@@ -45,7 +46,7 @@ const styles = theme => ({
         marginTop: 10,
     },
     bottomScrollImg: {
-        position: "fixed",
+        position: "absolute",
         display: "flex",
         justifyContent: "center",
         left: 0,
@@ -132,7 +133,9 @@ class Home extends Component {
                         </div>
                     </Container>
                 </div>
-            </div >
+                <Skills />
+                <div style={{ height: 130 }} />
+            </div>
         )
     }
 }
