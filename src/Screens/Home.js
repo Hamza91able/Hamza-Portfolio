@@ -8,6 +8,7 @@ import ScrollDownImage from '../Assets/Images/Group 32.png';
 import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
+import Proficiency from './Proficiency';
 
 const styles = theme => ({
     hideImageMobile: {
@@ -140,6 +141,8 @@ class Home extends Component {
                 <Education />
                 <div style={{ height: 130 }} />
                 <Experience />
+                <div style={{ height: 130 }} />
+                <Proficiency />
                 <div style={{ height: 130 }} />
             </div>
         )
