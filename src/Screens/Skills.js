@@ -96,7 +96,7 @@ class Skills extends Component {
                     <Grid container>
                         {
                             skills.map((skill, index) => (
-                                <Grid item xs={3} style={{ marginBottom: 20 }}>
+                                <Grid item xs={12} md={3} className={displayCenter} style={{ marginBottom: 20 }}>
                                     <Paper elevation={2} className={`${skillPaper}`}>
                                         <Grid container style={{ height: "100%" }}>
                                             <Grid item xs={12} className={displayCenter}>
