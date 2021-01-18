@@ -113,7 +113,6 @@ class Skills extends Component {
                             ))
                         }
                     </Grid>
-
                 </Container>
             </>
         )

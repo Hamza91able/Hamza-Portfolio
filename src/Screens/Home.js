@@ -6,6 +6,7 @@ import './Home.css';
 import Image01 from '../Assets/Images/Group 34.png';
 import ScrollDownImage from '../Assets/Images/Group 32.png';
 import Skills from './Skills';
+import Education from './Education';
 
 const styles = theme => ({
     hideImageMobile: {
@@ -58,7 +59,7 @@ const styles = theme => ({
         marginLeft: 60
     },
     image01StyleMobile: {
-        width: "100%",
+        width: "90%",
         marginLeft: 30,
     },
     displayCenter: {
@@ -134,6 +135,8 @@ class Home extends Component {
                     </Container>
                 </div>
                 <Skills />
+                <div style={{ height: 130 }} />
+                <Education />
                 <div style={{ height: 130 }} />
             </div>
         )
