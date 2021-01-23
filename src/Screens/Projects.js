@@ -69,12 +69,14 @@ class Projects extends Component {
                         items={
                             projects.map((project, index) => {
                                 return (
-                                    <Paper style={{ marginRight: 30, borderRadius: 15, }}>
-                                        <img src={project.img} alt={index} className={image} draggable={false} />
-                                        <Typography className={description}>
-                                            {project.description}
-                                        </Typography>
-                                    </Paper>
+                                    <a href={project.link} target="_blank">
+                                        <Paper style={{ marginRight: 30, borderRadius: 15, }} onClick={() => window.open(project.link, '_blank')}>
+                                            <img src={project.img} alt={index} className={image} draggable={false} />
+                                            <Typography className={description}>
+                                                {project.description}
+                                            </Typography>
+                                        </Paper>
+                                    </a>
                                 )
                             })
                         }
@@ -91,7 +93,10 @@ class Projects extends Component {
 const projects = [
     {
         img: Project1,
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        description: `
+            Portfolio website created for an artist using ReactJS
+        `,
+        link: "www.fathymakhalid.com"
     },
     {
         img: Project1,
