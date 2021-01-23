@@ -127,7 +127,7 @@ class Skills extends Component {
                 </div>
                 <div className={displayCenter}>
                     <Typography className={para1}>
-                        Skills ka bhashan here
+                        Skills that I'm proficient in
                     </Typography>
                 </div>
                 <Container maxWidth="lg" style={{ marginTop: 30 }}>
