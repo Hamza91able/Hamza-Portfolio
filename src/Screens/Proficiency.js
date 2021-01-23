@@ -27,20 +27,40 @@ const styles = theme => ({
 
 const proficiencies = [
     {
-        name: "HTML",
+        name: "ReactJS",
+        level: 95,
+    },
+    {
+        name: "NodeJS/Express",
+        level: 90,
+    },
+    {
+        name: "MongoDB/Mongoose",
+        level: 85,
+    },
+    {
+        name: "React Native",
+        level: 70,
+    },
+    {
+        name: "SQL Database",
+        level: 65,
+    },
+    {
+        name: "Javascript",
         level: 95,
     },
     {
         name: "HTML",
-        level: 95,
+        level: 90,
     },
     {
-        name: "HTML",
-        level: 95,
+        name: "CSS3",
+        level: 87,
     },
     {
-        name: "HTML",
-        level: 95,
+        name: "Github",
+        level: 80,
     },
 ]
 
