@@ -3,6 +3,14 @@ import { withStyles } from "@material-ui/core/styles";
 import { Container, Grid, Paper, Typography } from '@material-ui/core';
 
 import HTML from '../Assets/Images/Mask Group 22.png';
+import ReactIcon from '../Assets/Images/react.svg';
+import NodeIcon from '../Assets/Images/nodejs.svg';
+import ExpressIcon from '../Assets/Images/expressjs.png';
+import MongoDbIcon from '../Assets/Images/mongodb.svg';
+import SqlDatabase from '../Assets/Images/sql-database.svg';
+import CSSIcon from '../Assets/Images/css.svg';
+import GithubIcon from '../Assets/Images/github.svg';
+import JavascriptIcon from '../Assets/Images/javascript.svg';
 
 const styles = theme => ({
     mainHeading: {
@@ -31,35 +39,64 @@ const styles = theme => ({
         padding: 30,
     },
     skillLogo: {
-        height: 60,
-        width: 60,
+        height: 80,
+        width: 80,
     },
     skillName: {
         color: "white",
         fontSize: 18,
+    },
+    mongooseStyle: {
+        color: "#800",
+        fontWeight: 100,
+        fontSize: 35,
     }
 });
 
 const skills = [
     {
-        skillName: "HTML",
-        img: HTML,
+        skillName: "ReactJS",
+        img: ReactIcon,
+    },
+    {
+        skillName: "NodeJS",
+        img: NodeIcon,
+    },
+    {
+        skillName: "Express",
+        img: ExpressIcon,
+    },
+    {
+        skillName: "MongoDB",
+        img: MongoDbIcon,
+    },
+    {
+        skillName: "Mongoose",
+        img: null,
+    },
+    {
+        skillName: "React Native",
+        img: ReactIcon,
+    },
+    {
+        skillName: "SQL Database",
+        img: SqlDatabase,
+    },
+    {
+        skillName: "Javascript",
+        img: JavascriptIcon,
     },
     {
         skillName: "HTML",
         img: HTML,
     },
     {
-        skillName: "HTML",
-        img: HTML,
+        skillName: "CSS3",
+        img: CSSIcon,
     },
     {
-        skillName: "HTML",
-        img: HTML,
-    },
-    {
-        skillName: "HTML",
-        img: HTML,
+        skillName: "Github",
+        img: GithubIcon,
     },
 ]
 
@@ -75,6 +112,7 @@ class Skills extends Component {
             skillPaper,
             skillLogo,
             skillName,
+            mongooseStyle,
         } = classes;
 
         return (
@@ -100,7 +138,16 @@ class Skills extends Component {
                                     <Paper elevation={2} className={`${skillPaper}`}>
                                         <Grid container style={{ height: "100%" }}>
                                             <Grid item xs={12} className={displayCenter}>
-                                                <img src={skill.img} alt={skill.skillName} className={skillLogo} />
+                                                {
+                                                    skill.skillName !== "Mongoose"
+                                                        ?
+                                                        <img src={skill.img} alt={skill.skillName} className={skillLogo} />
+                                                        :
+                                                        <Typography className={mongooseStyle}>
+                                                            Mongoose
+                                                        </Typography>
+                                                }
+
                                             </Grid>
                                             <Grid item xs={12} className={displayCenter}>
                                                 <Typography className={skillName}>
