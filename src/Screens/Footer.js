@@ -87,6 +87,8 @@ class Footer extends Component {
                                             HAMZA <text style={{ color: "white" }}>KHAN</text>
                                         </Typography>
                                         <Typography className={secondaryText}>
+                                            Software Engineer
+                                            <br />
                                             MERN Stack Developer
                                         </Typography>
                                     </Grid>
