@@ -3,6 +3,8 @@ import { withStyles } from "@material-ui/core/styles";
 import { Avatar, Container, Grid, List, ListItem, ListItemAvatar, ListItemText, Paper, Typography } from '@material-ui/core';
 
 import KULogo from '../Assets/Images/Group 29.png';
+import JouharDegree from '../Assets/Images/jouhar.jpg';
+import TheEducators from '../Assets/Images/the-educators-1.jpg';
 
 const styles = theme => ({
     mainHeading: {
@@ -24,6 +26,7 @@ const styles = theme => ({
         height: "auto",
         background: "#0A0A0A",
         padding: 10,
+        boxShadow: "-12px -20px 20px 0px rgba(0,0,0,0.75)",
         [theme.breakpoints.up('sm')]: {
             width: 527,
             height: 236,
@@ -49,6 +52,7 @@ const styles = theme => ({
     educationDiscription: {
         fontSize: 12,
         color: "#FFFFFF",
+        whiteSpace: "pre-line",
     }
 });
 
@@ -57,29 +61,23 @@ const educations = [
         educationLogo: KULogo,
         educationInstitute: "University of Karachi",
         educationName: "Bachelors of Science in Computer",
-        educationDate: "January 2017 - January 2021",
-        educationDiscription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        educationDate: "January 2017 - February 2021",
+        educationDiscription: `I'm pursuing a degree in Software Engineering from University of Karachi. 
+        I will be graduating in Feb 21' with 3.0 CGPA`
     },
     {
-        educationLogo: KULogo,
-        educationInstitute: "University of Karachi",
-        educationName: "Bachelors of Science in Computer",
-        educationDate: "January 2017 - January 2021",
-        educationDiscription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        educationLogo: JouharDegree,
+        educationInstitute: "Jouhar Degree College",
+        educationName: "Pre-Engineering",
+        educationDate: "2013-2016",
+        educationDiscription: "I have done my intermediate in Pre-Engineering from Karachi Board."
     },
     {
-        educationLogo: KULogo,
-        educationInstitute: "University of Karachi",
-        educationName: "Bachelors of Science in Computer",
-        educationDate: "January 2017 - January 2021",
-        educationDiscription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
-    },
-    {
-        educationLogo: KULogo,
-        educationInstitute: "University of Karachi",
-        educationName: "Bachelors of Science in Computer",
-        educationDate: "January 2017 - January 2021",
-        educationDiscription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        educationLogo: TheEducators,
+        educationInstitute: "The Educators",
+        educationName: "Matriculation",
+        educationDate: "2001-2013",
+        educationDiscription: "I have done my matric in Science from Karachi Board and I got 74% marks in it."
     },
 ]
 
@@ -118,7 +116,7 @@ class Education extends Component {
                                         <List className={classes.root}>
                                             <ListItem>
                                                 <ListItemAvatar>
-                                                    <img src={education.educationLogo} alt={education.educationName} className={educationLogo} />
+                                                    <Avatar src={education.educationLogo} alt={education.educationName} className={educationLogo} />
                                                 </ListItemAvatar>
                                                 <ListItemText style={{ marginLeft: 30 }} primary={
                                                     <Typography className={educationInstitute}>
