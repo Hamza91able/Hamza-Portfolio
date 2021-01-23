@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { withStyles } from "@material-ui/core/styles";
 import { Container, Grid, Paper, Typography } from '@material-ui/core';
 
-import HTML from '../Assets/Images/Mask Group 22.png';
+import Freelancing from '../Assets/Images/freelancing.svg';
+import Novasoft from '../Assets/Images/logo.png';
 
 const styles = theme => ({
     mainHeading: {
@@ -49,23 +50,30 @@ const styles = theme => ({
     experienceDetails: {
         fontSize: 14,
         color: "white",
+        whiteSpace: "pre-line",
     }
 });
 
 const skills = [
     {
-        img: HTML,
-        experienceName: "NOVASOFT",
-        experienceOccup: "FULL STACK DEVELOPER",
-        experienceDate: "JUNE 2019 - Present",
-        experienceDetails: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
-    },
-    {
-        img: HTML,
+        img: Freelancing,
         experienceName: "FREELANCING",
         experienceOccup: "FULL STACK DEVELOPER",
         experienceDate: "JUNE 2019 - Present",
-        experienceDetails: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged",
+        experienceDetails: `
+        Creating rich proefssional web applications
+        Created various Portfolio websites
+        CRM Development`,
+    },
+    {
+        img: Novasoft,
+        experienceName: "NOVASOFT",
+        experienceOccup: "SOFTWARE ENGINEER",
+        experienceDate: "JUNE 2019 - 2020",
+        experienceDetails: `
+        Designs and creates professional web applications
+        Checks feasibility of software prototypes
+        Modifies code to fix errors`,
     },
 ]
 
