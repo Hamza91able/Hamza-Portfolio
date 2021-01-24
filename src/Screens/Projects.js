@@ -4,7 +4,6 @@ import { Container, Grid, Paper, Typography } from '@material-ui/core';
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
 
-import Project2 from '../Assets/Project Images/Project2.png';
 import ProjectsDialog from '../Components/ProjectsDialog';
 
 const styles = theme => ({
