@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { withStyles } from "@material-ui/core/styles";
 import { Container, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, Paper, Typography } from '@material-ui/core';
 
-import FB from '../Assets/Images/Group 36.png';
-import Linkedin from '../Assets/Images/linkedin.png';
 import PhoneIcon from '../Assets/Images/Icon material-call.png';
 import Mail from '../Assets/Images/Icon zocial-email.png';
+
+import GithubIcon from '../Assets/Images/github.svg';
+import LinkedInIcon from '../Assets/Images/linkedin.svg';
 
 const styles = theme => ({
     mainDiv: {
@@ -27,10 +28,7 @@ const styles = theme => ({
     socialIcon: {
         width: 50,
         height: 50,
-    },
-    socialIcon2: {
-        width: 16,
-        height: 16,
+        cursor: "pointer",
     },
     socialParent: {
         display: "flex",
@@ -55,6 +53,10 @@ const styles = theme => ({
         [theme.breakpoints.up('sm')]: {
             justifyContent: "center",
         },
+    },
+    link: {
+        textDecoration: "none",
+        color: "white",
     }
 });
 
@@ -68,7 +70,6 @@ class Footer extends Component {
             secondaryText,
             normalText,
             socialIcon,
-            socialIcon2,
             socialParent,
             creditDiv,
             contentList,
@@ -97,58 +98,50 @@ class Footer extends Component {
                                             Follow Me
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs>
-                                        <img src={FB} alt="fb" className={socialIcon} />
+                                    <Grid item xs={3} md={2}>
+                                        <a href="https://github.com/hamza91able" target="_blank">
+                                            <img src={GithubIcon} alt="github" className={socialIcon} />
+                                        </a>
                                     </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
-                                    </Grid>
-                                    <Grid item xs className={socialParent}>
-                                        <img src={Linkedin} alt="fb" className={socialIcon2} />
+                                    <Grid item xs={3} md={2} className={socialParent}>
+                                        <a href="https://www.linkedin.com/in/datguyhamza/" target="_blank">
+                                            <img src={LinkedInIcon} alt="linkedin" className={socialIcon} />
+                                        </a>
                                     </Grid>
                                 </Grid>
                             </Grid>
                             <Grid item xs={12} md={4} className={centerDesktop}>
                                 <List className={contentList}>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Home
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Skills
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Education
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Experience
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Proficiency
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemText>
-                                            Projects
-                                        </ListItemText>
-                                    </ListItem>
+                                    <a href="#home" className={classes.link}>
+                                        <ListItem button>
+                                            <ListItemText primary="Profile" />
+                                        </ListItem>
+                                    </a>
+                                    <a href="#skills" className={classes.link}>
+                                        <ListItem button>
+                                            <ListItemText primary="Skills" />
+                                        </ListItem>
+                                    </a>
+                                    <a href="#education" className={classes.link}>
+                                        <ListItem button>
+                                            <ListItemText primary="Education" />
+                                        </ListItem>
+                                    </a>
+                                    <a href="#experience" className={classes.link}>
+                                        <ListItem button>
+                                            <ListItemText primary="Experience" />
+                                        </ListItem>
+                                    </a>
+                                    <a href="#proficiency" className={classes.link}>
+                                        <ListItem button>
+                                            <ListItemText primary="Proficiency" />
+                                        </ListItem>
+                                    </a>
+                                    <a href="#projects" className={classes.link}>
+                                        <ListItem button>
+                                            <ListItemText primary="Projects" />
+                                        </ListItem>
+                                    </a>
                                 </List>
                             </Grid>
                             <Grid item xs={12} md={4} className={centerDesktop}>
@@ -158,22 +151,34 @@ class Footer extends Component {
                                             Contact Me
                                         </ListItemText>
                                     </ListItem>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <img src={PhoneIcon} alt="phone" />
-                                        </ListItemAvatar>
-                                        <ListItemText>
-                                            03002322689
-                                        </ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemAvatar>
-                                            <img src={Mail} alt="mail" />
-                                        </ListItemAvatar>
-                                        <ListItemText>
-                                            m.hamzakhan91able@gmail.com
-                                        </ListItemText>
-                                    </ListItem>
+                                    <a
+                                        href="tel:+923002322689"
+                                        className={classes.link}
+                                    >
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <img src={PhoneIcon} alt="phone" />
+                                            </ListItemAvatar>
+                                            <ListItemText>
+                                                03002322689
+                                            </ListItemText>
+                                        </ListItem>
+                                    </a>
+                                    <a
+                                        href="mailto:Fatimashakilkhan@gmail.com"
+                                        target="_blank"
+                                        className={classes.link}
+                                    >
+                                        <ListItem>
+                                            <ListItemAvatar>
+                                                <img src={Mail} alt="mail" />
+                                            </ListItemAvatar>
+                                            <ListItemText>
+                                                m.hamzakhan91able@gmail.com
+                                            </ListItemText>
+                                        </ListItem>
+                                    </a>
+
                                 </List>
                             </Grid>
                         </Grid>
