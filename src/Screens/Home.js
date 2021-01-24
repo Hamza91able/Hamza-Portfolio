@@ -5,6 +5,7 @@ import './Home.css';
 
 import Image01 from '../Assets/Images/Group 34.png';
 import ScrollDownImage from '../Assets/Images/Group 32.png';
+import CV from '../Assets/Muhammad Hamza Khan.pdf';
 import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
@@ -108,19 +109,20 @@ class Home extends Component {
                                 <Typography className={para1}>
                                     I'm a Software Engineer from UBIT. Currently focused on Web Development using MERN Stack Technologies.
                                 </Typography>
-                                <Button
-                                    color="inherit"
-                                    style={{
-                                        backgroundImage: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,150,199,1) 0%, rgba(3,4,94,1) 100%",
-                                        color: "white",
-                                        width: 180,
-                                        padding: 10,
-                                        marginTop: 30,
-                                    }}
-                                    onClick={e => this.props.history.push("/artworks")}
-                                >
-                                    View Work
-                                </Button>
+                                <a href={CV} target="_blank" style={{ textDecoration: "none" }}>
+                                    <Button
+                                        color="inherit"
+                                        style={{
+                                            backgroundImage: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,150,199,1) 0%, rgba(3,4,94,1) 100%",
+                                            color: "white",
+                                            width: 180,
+                                            padding: 10,
+                                            marginTop: 30,
+                                        }}
+                                    >
+                                        Download CV
+                                    </Button>
+                                </a>
                             </Grid>
                             <Grid item xs={0} md={6} className={classes.hideImageMobile}>
                                 <img src={Image01} alt="image01" className={image01Style} />
