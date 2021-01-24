@@ -117,7 +117,7 @@ class Skills extends Component {
 
         return (
             <>
-                <div className={displayCenter}>
+                <div className={displayCenter} id="skills">
                     <Typography className={mainHeading}>
                         SKILLS
                         <div className={underlineStyle}>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItem from '@material-ui/core/ListItem';
@@ -9,11 +8,9 @@ import Divider from '@material-ui/core/Divider';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Avatar } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
 import "./General.css";
@@ -30,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(2),
         flex: 1,
     },
+    link: {
+        textDecoration: "none",
+        color: "white",
+    }
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -67,25 +68,39 @@ function MobileMenu(props) {
                     </Toolbar>
                 </AppBar>
                 <List>
-                    <ListItem button onClick={e => { props.history.push("/"); handleClose(); }}>
-                        <ListItemText primary="Home" />
-                    </ListItem>
-                    <Divider />
-                    <ListItem button onClick={e => { props.history.push("/"); handleClose(); }}>
-                        <ListItemText primary="Online Exhibitions" />
-                    </ListItem>
-                    <Divider />
-                    <ListItem button onClick={e => { props.history.push("/artworks"); handleClose(); }}>
-                        <ListItemText primary="Portfolio" />
-                    </ListItem>
-                    <Divider />
-                    <ListItem button onClick={e => { props.history.push("/exhibitions"); handleClose(); }}>
-                        <ListItemText primary="Exhibiton" />
-                    </ListItem>
-                    <Divider />
-                    <a href={window.location.pathname === "/" ? "#contact-us" : "/#contact-us"} style={{ textDecoration: "none", color: "black" }}>
+                    <a href="#home" className={classes.link}>
                         <ListItem button onClick={e => { handleClose(); }}>
-                            <ListItemText primary="Contact" />
+                            <ListItemText primary="Profile" />
+                        </ListItem>
+                    </a>
+                    <Divider />
+                    <a href="#skills" className={classes.link}>
+                        <ListItem button onClick={e => { handleClose(); }}>
+                            <ListItemText primary="Skills" />
+                        </ListItem>
+                    </a>
+                    <Divider />
+                    <a href="#education" className={classes.link}>
+                        <ListItem button onClick={e => { handleClose(); }}>
+                            <ListItemText primary="Education" />
+                        </ListItem>
+                    </a>
+                    <Divider />
+                    <a href="#experience" className={classes.link}>
+                        <ListItem button onClick={e => { handleClose(); }}>
+                            <ListItemText primary="Experience" />
+                        </ListItem>
+                    </a>
+                    <Divider />
+                    <a href="#proficiency" className={classes.link}>
+                        <ListItem button onClick={e => { handleClose(); }}>
+                            <ListItemText primary="Proficiency" />
+                        </ListItem>
+                    </a>
+                    <Divider />
+                    <a href="#projects" className={classes.link}>
+                        <ListItem button onClick={e => { handleClose(); }}>
+                            <ListItemText primary="Projects" />
                         </ListItem>
                     </a>
                 </List>

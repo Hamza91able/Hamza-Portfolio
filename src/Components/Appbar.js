@@ -43,6 +43,10 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             display: 'none',
         },
+    },
+    link: {
+        textDecoration: "none",
+        color: "white",
     }
 }));
 
@@ -54,21 +58,11 @@ const underlineStyle = {
 
 function Appbar(props) {
     const classes = useStyles();
-    const [selected, setSelected] = useState("Home");
-
-    useEffect(() => {
-        if (window.location.pathname === "/artworks") {
-            setSelected("Portfolio");
-        } else if (window.location.pathname === "/exhibitions") {
-            setSelected("Exhibition");
-        } else if (window.location.pathname === "/contact") {
-            setSelected("Contact");
-        }
-    }, [])
+    const [selected, setSelected] = useState("Profile");
 
     return (
         <div className={classes.root}>
-            <AppBar position="static" className={classes.appbar}>
+            <AppBar position="fixed" className={classes.appbar}>
                 <Toolbar style={{ marginTop: 20 }}>
                     <Container maxWidth="lg">
                         <Grid container>
@@ -82,71 +76,90 @@ function Appbar(props) {
                                     <MobileMenu />
                                 </div>
                                 <div style={{ marginTop: 5 }}>
-                                    <Button
-                                        color="inherit"
-                                        className={classes.button}
-                                        onClick={() => {
-                                            props.history.push("/contact");
-                                            setSelected("Contact");
-                                        }}
-                                    >
-                                        Contact Me
-                                        <div style={selected === "Contact" ? underlineStyle : {}}>
+                                    <a href="#projects" className={classes.link}>
+                                        <Button
+                                            color="inherit"
+                                            className={classes.button}
+                                            onClick={() => {
+                                                setSelected("Projects");
+                                            }}
+                                        >
+                                            Projects
+                                            <div style={selected === "Projects" ? underlineStyle : {}}>
 
-                                        </div>
-                                    </Button>
-                                    <Button
-                                        color="inherit"
-                                        className={classes.button}
-                                        onClick={() => {
-                                            props.history.push("/follow-me");
-                                            setSelected("Follow Me");
-                                        }}
-                                    >
-                                        Follow Me
-                                        <div style={selected === "Follow Me" ? underlineStyle : {}}>
+                                            </div>
+                                        </Button>
+                                    </a>
+                                    <a href="#proficiency" className={classes.link}>
+                                        <Button
+                                            color="inherit"
+                                            className={classes.button}
+                                            onClick={() => {
+                                                setSelected("Proficiency");
+                                            }}
+                                        >
+                                            Proficiency
+                                            <div style={selected === "Proficiency" ? underlineStyle : {}}>
 
-                                        </div>
-                                    </Button>
-                                    <Button
-                                        color="inherit"
-                                        className={classes.button}
-                                        onClick={() => {
-                                            props.history.push("/about");
-                                            setSelected("About");
-                                        }}
-                                    >
-                                        About
-                                        <div style={selected === "About" ? underlineStyle : {}}>
+                                            </div>
+                                        </Button>
+                                    </a>
+                                    <a href="#experience" className={classes.link}>
+                                        <Button
+                                            color="inherit"
+                                            className={classes.button}
+                                            onClick={() => {
+                                                setSelected("Experience");
+                                            }}
+                                        >
+                                            Experience
+                                            <div style={selected === "Experience" ? underlineStyle : {}}>
 
-                                        </div>
-                                    </Button>
-                                    <Button
-                                        color="inherit"
-                                        className={classes.button}
-                                        onClick={() => {
-                                            props.history.push("/portfolio");
-                                            setSelected("Portfolio");
-                                        }}
-                                    >
-                                        Portfolio
-                                        <div style={selected === "Portfolio" ? underlineStyle : {}}>
+                                            </div>
+                                        </Button>
+                                    </a>
+                                    <a href="#education" className={classes.link}>
+                                        <Button
+                                            color="inherit"
+                                            className={classes.button}
+                                            onClick={() => {
+                                                setSelected("Education");
+                                            }}
+                                        >
+                                            Education
+                                            <div style={selected === "Education" ? underlineStyle : {}}>
 
-                                        </div>
-                                    </Button>
-                                    <Button
-                                        color="inherit"
-                                        className={classes.button}
-                                        onClick={() => {
-                                            props.history.push("/");
-                                            setSelected("Home");
-                                        }}
-                                    >
-                                        Profile
-                                        <div style={selected === "Home" ? underlineStyle : {}}>
+                                            </div>
+                                        </Button>
+                                    </a>
+                                    <a href="#skills" className={classes.link}>
+                                        <Button
+                                            color="inherit"
+                                            className={classes.button}
+                                            onClick={() => {
+                                                setSelected("Skills");
+                                            }}
+                                        >
+                                            Skills
+                                            <div style={selected === "Skills" ? underlineStyle : {}}>
 
-                                        </div>
-                                    </Button>
+                                            </div>
+                                        </Button>
+                                    </a>
+                                    <a href="#home" className={classes.link}>
+                                        <Button
+                                            color="inherit"
+                                            className={classes.button}
+                                            onClick={() => {
+                                                setSelected("Profile");
+                                            }}
+                                        >
+                                            Profile
+                                            <div style={selected === "Profile" ? underlineStyle : {}}>
+
+                                            </div>
+                                        </Button>
+                                    </a>
                                 </div>
 
                             </Grid>

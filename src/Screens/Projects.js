@@ -73,7 +73,7 @@ class Projects extends Component {
 
         return (
             <>
-                <div className={displayCenter}>
+                <div className={displayCenter} id="projects">
                     <Typography className={mainHeading}>
                         PROJECTS
                         <div className={underlineStyle}>

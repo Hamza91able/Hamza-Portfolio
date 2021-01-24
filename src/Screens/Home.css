@@ -1,3 +1,7 @@
 .top-div {
     height: calc(100vh - 70px);
 }
+
+html {
+    scroll-behavior: smooth;
+}

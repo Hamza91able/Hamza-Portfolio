@@ -99,7 +99,7 @@ class Education extends Component {
 
         return (
             <>
-                <div className={displayCenter}>
+                <div className={displayCenter} id="education">
                     <Typography className={mainHeading}>
                         EDUCATION
                         <div className={underlineStyle}>

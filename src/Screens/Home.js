@@ -89,7 +89,7 @@ class Home extends Component {
 
         return (
             <div>
-                <div className="top-div">
+                <div className="top-div" id="home">
                     <Container maxWidth="lg" style={{ padding: 0, height: "100%" }}>
                         <Grid container style={{
                             display: "flex",
@@ -133,11 +133,11 @@ class Home extends Component {
                                 </div>
                             </Grid>
                         </Grid>
-                        <div className={bottomScrollImg}>
+                        {/* <div className={bottomScrollImg}>
                             <img src={ScrollDownImage} alt="scroll-down" style={{
                                 cursor: "pointer",
                             }} />
-                        </div>
+                        </div> */}
                     </Container>
                 </div>
                 <Skills />

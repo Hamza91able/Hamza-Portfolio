@@ -11,6 +11,7 @@ export default class Router extends Component {
         return (
             <>
                 <Appbar />
+                <div style={{ height: 84 }} />
                 <Route
                     path='/'
                     exact

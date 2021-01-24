@@ -77,7 +77,7 @@ class Proficiency extends Component {
 
         return (
             <>
-                <div className={displayCenter}>
+                <div className={displayCenter} id="proficiency">
                     <Typography className={mainHeading}>
                         PROFICIENCY
                         <div className={underlineStyle}>

@@ -95,7 +95,7 @@ class Experience extends Component {
 
         return (
             <>
-                <div className={displayCenter}>
+                <div className={displayCenter} id="experience">
                     <Typography className={mainHeading}>
                         Experience
                         <div className={underlineStyle}>
