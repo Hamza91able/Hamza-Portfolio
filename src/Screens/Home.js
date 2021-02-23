@@ -60,7 +60,7 @@ const styles = theme => ({
         width: "100%",
     },
     image01Style: {
-        width: 650,
+        width: 550,
         marginLeft: 60
     },
     image01StyleMobile: {
