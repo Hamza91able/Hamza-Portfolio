@@ -5,7 +5,7 @@ import './Home.css';
 
 import Image01 from '../Assets/Images/Group 34.png';
 import ScrollDownImage from '../Assets/Images/Group 32.png';
-import CV from '../Assets/Muhammad Hamza Khan.pdf';
+import CV from '../Assets/Muhammad Hamza Khan - CV.pdf';
 import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
@@ -143,8 +143,8 @@ class Home extends Component {
                 <Skills />
                 <div style={{ height: 130 }} />
                 <Education />
-                <div style={{ height: 130 }} />
-                <Experience />
+                {/* <div style={{ height: 130 }} /> */}
+                {/* <Experience /> */}
                 <div style={{ height: 130 }} />
                 <Proficiency />
                 <div style={{ height: 130 }} />

@@ -104,7 +104,7 @@ function Appbar(props) {
                                             </div>
                                         </Button>
                                     </a>
-                                    <a href="#experience" className={classes.link}>
+                                    {/* <a href="#experience" className={classes.link}>
                                         <Button
                                             color="inherit"
                                             className={classes.button}
@@ -117,7 +117,7 @@ function Appbar(props) {
 
                                             </div>
                                         </Button>
-                                    </a>
+                                    </a> */}
                                     <a href="#education" className={classes.link}>
                                         <Button
                                             color="inherit"
